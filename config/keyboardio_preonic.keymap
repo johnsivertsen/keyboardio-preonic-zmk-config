@@ -32,15 +32,14 @@
     keymap {
         compatible = "zmk,keymap";
 
-// Default Base layer:
-//                                                                                                             &kp C_PP    &mo FN      &kp C_MUTE
-//
-// &kp GRAVE   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
-// &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BKSP
-// &kp ESC     &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
-// &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp PERIOD  &kp SLASH   &kp ENTER
-// &kp HYPER   &kp LCTRL   &kp LALT    &kp LGUI    &mo LOWER         &kp SPACE         &mo RAISE   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
-
+        // Default Base layer:
+        //                                                                                                             &kp C_PP    &mo FN      &kp C_MUTE
+        //
+        // &kp GRAVE   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
+        // &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BKSP
+        // &kp ESC     &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
+        // &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp PERIOD  &kp SLASH   &kp ENTER
+        // &kp HYPER   &kp LCTRL   &kp LALT    &kp LGUI    &mo LOWER         &kp SPACE         &mo RAISE   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
 
         l0_layer {
             label = "L0";
@@ -87,15 +86,6 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-//                                                                                                                          &trans          &trans           &trans
-//
-// &trans      &kp F1        &kp F2      &kp F3          &kp F4      &kp F5      &kp F6      &kp F7          &kp F8         &kp F9          &kp F10          &kp DEL
-// &trans      &kp F11       &kp F12     &trans          &trans      &trans      &trans      &kp LS(GRAVE)   &kp LS(BSLH)   &kp LS(MINUS)   &kp LS(SLASH)    &kp LEFT_BRACKET
-// &kp EQUAL   &kp LA(BSLH)  &kp PIPE    &kp RA(BSLH)    &kp CAPS    &trans      &trans      &kp GRAVE       &kp BSLH       &kp MINUS       &kp SLASH        &kp SQT
-// &trans      &trans        &trans      &trans          &trans      &trans      &trans      &trans          &kp PSCR       &kp INS         &kp HOME         &kp PG_UP
-// &trans      &trans        &trans      &trans          &trans            &trans            &trans          &trans         &trans          &kp END          &kp PG_DN
-
-
         l3_layer {
             label = "Layer 3";
             bindings = <
@@ -116,11 +106,11 @@
             bindings = <
                                                                                                              &trans      &trans      &trans
 
+ &out OUT_TOG &bt BT(0)   &bt BT(1)   &bt BT(2)   &bt BT(3)   &bt BT(4)   &trans      &trans      &trans     &trans      &trans      &trans
  &trans       &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans     &trans      &trans      &trans
  &trans       &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans     &trans      &trans      &trans
  &trans       &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans     &trans      &trans      &trans
- &trans       &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans     &trans      &trans      &trans
- &trans       &trans      &trans      &trans      &trans            &trans            &trans      &trans     &trans      &trans      &trans
+ &bootloader  &trans      &trans      &trans      &studio_unlock    &trans            &trans      &trans     &trans      &trans      &bt BT_CLR
 
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
