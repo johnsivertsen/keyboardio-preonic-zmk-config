@@ -11,7 +11,12 @@
 
 #define L1 1
 #define L2 2
-#define FN 3
+#define L3 3
+#define L4 4
+#define L5 5
+#define L6 6
+#define L7 7
+#define FN 8
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
