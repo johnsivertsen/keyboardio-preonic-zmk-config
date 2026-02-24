@@ -12,11 +12,7 @@
 #define L1 1
 #define L2 2
 #define L3 3
-#define L4 4
-#define L5 5
-#define L6 6
-#define L7 7
-#define FN 8
+#define FN 4
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -46,10 +42,10 @@
 // &kp HYPER   &kp LCTRL   &kp LALT    &kp LGUI    &mo LOWER         &kp SPACE         &mo RAISE   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
 
 
-        base_layer {
+        l0_layer {
             label = "L0";
             bindings = <
-                                                                                                             &kp C_PP    &trans      &kp C_MUTE
+                                                                                                             &kp C_PP    &mo FN      &kp C_MUTE
 
  &trans      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp BKSP
  &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp RBKT
@@ -61,31 +57,46 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        lower_layer {
+        l1 {
             label = "L1";
             bindings = <
                                                                                                                &trans          &trans       &trans
 
- &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS &kp KP_EQUAL
- &trans      &trans      &trans      &trans      &trans      &trans      &trans      &kp KP_N7   &kp KP_N8     &kp KP_N9       &kp KP_MINUS &trans
- &trans      &trans      &trans      &trans      &trans      &trans      &trans      &kp KP_N4   &kp KP_N5     &kp KP_N6       &kp KP_PLUS  &trans
- &trans      &trans      &trans      &trans      &trans      &trans      &trans      &kp KP_N1   &kp KP_N2     &kp KP_N3       &kp KP_PLUS  &trans
- &trans      &trans      &trans      &trans      &trans            &kp BKSP          &kp KP_N0   &kp KP_DOT    &trans          &kp KP_ENTER &trans
+ &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans        &trans          &trans       &trans
+ &trans      &trans      LGUI        &trans      &trans      &trans      &trans      &trans      &trans        &trans          &trans       &trans
+ &trans      &trans      &kp LALT    &kp LSHIFT  &kp LCTRL   &kp RALT    &kp H       &kp J       &kp K         &kp L           &kp SEMI     &trans
+ &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans        &trans          &trans       &trans
+ &trans      &trans      &trans      &trans      &trans            &trans            &trans      &trans        &trans          &trans       &trans
 
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        raise_layer {
+        l2 {
             label = "L2";
             bindings = <
                                                                                                                &trans     &trans     &trans
 
- &kp ESC     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7       &kp F8       &kp F9     &kp F10    &kp BKSP
- &trans      &trans      &trans      &trans      &trans      &trans      &kp BSLH    &kp LS(LBKT) &kp LS(RBKT) &kp LBKT   &kp RBKT   &kp DEL
- &kp CAPS    &trans      &trans      &trans      &trans      &trans      &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT  &trans     &trans
- &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans       &trans       &trans     &trans     &trans
- &trans      &trans      &kp RALT    &trans      &trans            &trans            &trans       &trans       &trans     &trans     &trans
+ &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans        &trans          &trans       &trans
+ &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans        &kp RGUI        &trans       &trans
+ &trans      &kp A       &kp S       &kp D       &kp F       &kp G       &kp RALT    &kp LCTRL   &kp LSHIFT    &kp LALT        &trans       &trans
+ &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans        &trans          &trans       &trans
+ &trans      &trans      &trans      &trans      &trans            &trans            &trans      &trans        &trans          &trans       &trans
+
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+        };
+
+        l3 {
+            label = "L3";
+            bindings = <
+                                                                                                               &trans     &trans     &trans
+
+ &trans      &kp F1        &kp F2      &kp F3          &kp F4      &kp F5      &kp F6      &kp F7          &kp F8         &kp F9          &kp F10          &kp DEL
+ &trans      &kp F11       &kp F12     &trans          &trans      &trans      &trans      &kp LS(GRAVE)   &kp LS(BSLH)   &kp LS(MINUS)   &kp LS(SLASH)    &kp LEFT_BRACKET
+ &kp EQUAL   &kp LA(BSLH)  &kp PIPE    &kp RALT(BSLH)  &kp CAPS    &trans      &trans      &kp GRAVE       &kp BSLH       &kp MINUS       &kp SLASH        &kp SQT
+ &trans      &trans        &trans      &trans          &trans      &trans      &trans      &trans          &kp PSCR       &kp INS         &kp HOME         &kp PG_UP
+ &trans      &trans        &trans      &trans          &trans            &trans            &trans          &trans         &trans          &kp END          &kp PG_DN
 
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
