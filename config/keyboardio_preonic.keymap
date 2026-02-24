@@ -60,13 +60,13 @@
         l1_layer {
             label = "Layer 1";
             bindings = <
-                                                                                                             &trans      &trans      &trans
+                                                                                                               &trans          &trans       &trans
 
- &trans       &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans     &trans      &trans      &trans
- &trans       &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans     &trans      &trans      &trans
- &trans       &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans     &trans      &trans      &trans
- &trans       &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans     &trans      &trans      &trans
- &trans       &trans      &trans      &trans      &trans            &trans            &trans      &trans     &trans      &trans      &trans
+ &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans        &trans          &trans       &trans
+ &trans      &trans      &kp LGUI    &trans      &trans      &trans      &trans      &trans      &trans        &trans          &trans       &trans
+ &trans      &trans      &kp LALT    &kp LSHIFT  &kp LCTRL   &kp RALT    &kp H       &kp J       &kp K         &kp L           &kp SEMI     &trans
+ &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans        &trans          &trans       &trans
+ &trans      &trans      &trans      &trans      &trans            &trans            &trans      &trans        &trans          &trans       &trans
 
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
