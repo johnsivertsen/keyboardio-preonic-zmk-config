@@ -75,13 +75,14 @@
         l2_layer {
             label = "Layer 2";
             bindings = <
-                                                                                                             &trans      &trans      &trans
+                                                                                                               &trans          &trans       &trans
 
- &trans       &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans     &trans      &trans      &trans
- &trans       &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans     &trans      &trans      &trans
- &trans       &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans     &trans      &trans      &trans
- &trans       &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans     &trans      &trans      &trans
- &trans       &trans      &trans      &trans      &trans            &trans            &trans      &trans     &trans      &trans      &trans
+ &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans        &trans          &trans       &trans
+ &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans        &kp RGUI        &trans       &trans
+ &trans      &kp A       &kp S       &kp D       &kp F       &kp G       &kp RALT    &kp LCTRL   &kp LSHIFT    &kp LALT        &trans       &trans
+ &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans        &trans          &trans       &trans
+ &trans      &trans      &trans      &trans      &trans            &trans            &trans      &trans        &trans          &trans       &trans
+
 
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
