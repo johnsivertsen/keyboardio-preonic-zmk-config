@@ -9,8 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define LOWER 1
-#define RAISE 2
+#define L1 1
+#define L2 2
 #define FN 3
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
@@ -31,23 +31,33 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base_layer {
-            label = "Base";
-            bindings = <
-                                                                                                             &kp C_PP    &mo FN      &kp C_MUTE
+// Default Base layer:
+//                                                                                                             &kp C_PP    &mo FN      &kp C_MUTE
+//
+// &kp GRAVE   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
+// &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BKSP
+// &kp ESC     &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
+// &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp PERIOD  &kp SLASH   &kp ENTER
+// &kp HYPER   &kp LCTRL   &kp LALT    &kp LGUI    &mo LOWER         &kp SPACE         &mo RAISE   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
 
- &kp GRAVE   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS
- &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BKSP
- &kp ESC     &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
- &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp PERIOD  &kp SLASH   &kp ENTER
- &kp HYPER   &kp LCTRL   &kp LALT    &kp LGUI    &mo LOWER         &kp SPACE         &mo RAISE   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
+
+        base_layer {
+            label = "L0";
+            bindings = <
+                                                                                                             &kp C_PP    &trans      &kp C_MUTE
+
+ &trans      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp BKSP
+ &kp TAB     &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U       &kp I       &kp O       &kp P       &kp RBKT
+ &mo L1      &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J       &kp K       &kp L       &kp SEMI    &mo L2
+ &kp ESC     &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp COMMA   &kp PERIOD  &kp UP      &kp ENTER
+ &trans      &trans      &trans      &trans      &mo L3            &kp SPACE         &mo L3      &trans      &kp LEFT    &kp DOWN    &kp RIGHT
 
             >;
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;            
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         lower_layer {
-            label = "Lower";
+            label = "L1";
             bindings = <
                                                                                                                &trans          &trans       &trans
 
@@ -62,7 +72,7 @@
         };
 
         raise_layer {
-            label = "Raise";
+            label = "L2";
             bindings = <
                                                                                                                &trans     &trans     &trans
 
