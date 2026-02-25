@@ -9,6 +9,7 @@ docker run -it zmkfirmware/zmk-dev-arm:4.1-branch /bin/bash
 ## Run in docker
 
 ```
+mkdir /workspaces
 cd /workspaces
 git clone https://github.com/johnsivertsen/keyboardio-preonic-zmk-config.git
 export WORKSPACE_DIR=/workspaces/keyboardio-preonic-zmk-config
