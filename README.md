@@ -6,9 +6,10 @@
 docker run -it zmkfirmware/zmk-dev-arm:4.1-branch /bin/bash
 ```
 
-## Run in docker
+## Attach to container and run...
 
 ```
+bash # for usable shell experience
 mkdir /workspaces
 cd /workspaces
 git clone https://github.com/johnsivertsen/keyboardio-preonic-zmk-config.git
@@ -20,5 +21,17 @@ export ZEPHYR_DIR=/workspaces/keyboardio-preonic-zmk-config/zephyr
 west config build.cmake-args \
   -- "-DZMK_CONFIG=/workspaces/keyboardio-preonic-zmk-config/config"
 west build --pristine -s zmk/app -b keyboardio_preonic
-copy file from build/zephyr/zmk.uf2 to keyboard
 ```
+
+Copy file from build/zephyr/zmk.uf2 to keyboard via File Explorer.
+
+If keyboard is not shown as drive in File Explorer, press `Fun` + `Hyper`. 
+
+If successful, LEDs should change to:
+
+```
+(off, off)
+(off, green)
+```
+
+Hyper button is in bottom left corner.
